@@ -1,21 +1,20 @@
 import java.awt.*;
-public class board {
+
+public class Board {
+
     public void draw(Graphics2D g2) {
         drawGrass(g2);
-
     }
 
-    private void drawGrass(Graphics2D g2){
+    private void drawGrass(Graphics2D g2) {
         int tile = GameConstants.TILE;
-        for (int x = 0; <GameConstants.COLS; x++) {
-            for (int y = 0; y < GameConstants.ROWS; Y++) {
-                boolean shade = (x+y) % 2 == 0;
 
-                g2.setColor(shade ? new Color(90,163,66 : new color (83,153,60));
+        for (int x = 0; x < GameConstants.COLS; x++) {
+            for (int y = 0; y < GameConstants.ROWS; y++) {
+                boolean shade = (x + y) % 2 == 0;
+                g2.setColor(shade ? new Color(90, 163, 66) : new Color(83, 153, 60));
+
                 g2.fillRect(x * tile, y * tile, tile, tile);
-
-
-
             }
         }
     }
